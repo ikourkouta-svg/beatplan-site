@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beatplan</title>
+<meta name="description" content="Beatplan tells your sales team who to call today, and why. Built for distributors and wholesalers who sell on the road.">
+<meta name="theme-color" content="#37327e">
+<meta property="og:title" content="Beatplan">
+<meta property="og:description" content="Tells your team who to call today, and why.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beatplan.io/">
+<style>
+  :root{
+    --ink:#0f172a; --muted:#5b6577; --line:#e3e6ec; --bg:#ffffff; --panel:#f7f8fa;
+    --brand:#37327e; --accent:#0f766e; --max:64rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e8eaf0; --muted:#9aa4b8; --line:#252a36; --bg:#0d1017; --panel:#141924; --brand:#8b86e8; --accent:#3fbfae; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 1.25rem}
+  a{color:var(--accent)}
+  header{border-bottom:1px solid var(--line)}
+  .bar{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1.1rem 0}
+  .logo{font-weight:700; letter-spacing:-.02em; font-size:1.15rem; color:var(--ink); text-decoration:none}
+  .logo span{color:var(--brand)}
+  .btn{
+    display:inline-block; border-radius:.55rem; padding:.6rem 1.1rem; font-size:.9rem;
+    font-weight:600; text-decoration:none; border:1px solid transparent; white-space:nowrap;
+  }
+  .btn-solid{background:var(--brand); color:#fff}
+  .btn-ghost{border-color:var(--line); color:var(--ink)}
+  h1{font-size:clamp(2rem,5.5vw,3.1rem); line-height:1.12; letter-spacing:-.03em; margin:0 0 1rem}
+  h2{font-size:1.35rem; letter-spacing:-.02em; margin:0 0 .6rem}
+  h3{font-size:1rem; margin:0 0 .35rem}
+  p{margin:0 0 1rem}
+  .lede{font-size:1.12rem; color:var(--muted); max-width:38rem}
+  section{padding:4rem 0; border-bottom:1px solid var(--line)}
+  .hero{padding:5rem 0 4rem}
+  .cta-row{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.75rem}
+  .grid{display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:.8rem; padding:1.4rem}
+  .price{font-size:2rem; font-weight:700; letter-spacing:-.02em; margin:.2rem 0 .1rem}
+  .price small{font-size:.85rem; font-weight:400; color:var(--muted)}
+  ul.ticks{list-style:none; padding:0; margin:1rem 0 0}
+  ul.ticks li{padding-left:1.35rem; position:relative; margin-bottom:.4rem; font-size:.93rem}
+  ul.ticks li::before{content:"–"; position:absolute; left:.3rem; color:var(--accent)}
+  footer{padding:2.5rem 0 3.5rem; color:var(--muted); font-size:.88rem}
+  .foot{display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="/">beat<span>plan</span></a>
+    <nav style="display:flex;gap:.5rem;align-items:center">
+      <a class="btn btn-ghost" href="#pricing">Pricing</a>
+      <a class="btn btn-solid" href="https://app.beatplan.io/">Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Tells your team who to call today,<br>and why.</h1>
+    <p class="lede">
+      Beatplan is a sales and operations assistant for distributors and wholesalers. It turns your
+      sales history into a daily call list, so nobody has to remember which customer has gone quiet.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="https://app.beatplan.io/">Open the app</a>
+      <a class="btn btn-ghost" href="#pricing">See pricing</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it actually does</h2>
+    <p class="lede small">No dashboards nobody opens. A list, in order, with a reason next to each name.</p>
+    <div class="grid" style="margin-top:2rem">
+      <div>
+        <h3>A queue, not a database</h3>
+        <p class="muted small">Every customer has a rhythm. When one falls behind their own pattern, they
+        appear at the top of the list with the reason and what they usually buy.</p>
+      </div>
+      <div>
+        <h3>Works with no signal</h3>
+        <p class="muted small">Built for people in a vehicle. Calls and orders log offline and sync when
+        the phone finds a connection again.</p>
+      </div>
+      <div>
+        <h3>Stock that argues back</h3>
+        <p class="muted small">It will not push what you are short of, sells the oldest batch first, and
+        raises an alarm when a price sits below cost.</p>
+      </div>
+      <div>
+        <h3>Debtors in the same place</h3>
+        <p class="muted small">Who owes what, how old it is, and who promised to pay when. Logged from
+        the same screen as the call.</p>
+      </div>
+      <div>
+        <h3>A morning email</h3>
+        <p class="muted small">Who to chase, what is expiring, what needs reordering. Sent before the day
+        starts, so the plan exists before anyone opens a screen.</p>
+      </div>
+      <div>
+        <h3>A monthly view for owners</h3>
+        <p class="muted small">Revenue against the same month last year, which customers grew, which
+        declined, how the debtor book is ageing, and what stock is dead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>Pricing</h2>
+    <p class="lede small">Priced per company, not per person, so putting your whole team on it costs
+    nothing extra. Paying yearly costs ten months instead of twelve.</p>
+    <div class="grid" style="margin-top:2rem">
+      <div class="card">
+        <h3>Starter</h3>
+        <div class="price">$29 <small>/ month</small></div>
+        <p class="muted small">Up to 5 people</p>
+        <ul class="ticks">
+          <li>Daily call queue</li>
+          <li>Customers, contacts and debtors</li>
+          <li>Offline on every phone</li>
+          <li>Morning email</li>
+        </ul>
+      </div>
+      <div class="card" style="border-color:var(--brand)">
+        <h3>Business</h3>
+        <div class="price">$79 <small>/ month</small></div>
+        <p class="muted small">Up to 20 people</p>
+        <ul class="ticks">
+          <li>Everything in Starter</li>
+          <li>Stock, expiry and reorder advice</li>
+          <li>Trips and field reports</li>
+          <li>Monthly review for directors</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Enterprise</h3>
+        <div class="price">$149 <small>/ month</small></div>
+        <p class="muted small">Unlimited people</p>
+        <ul class="ticks">
+          <li>Everything in Business</li>
+          <li>Your own branding and domain</li>
+          <li>Several branches</li>
+          <li>Import from your accounts package</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted small" style="margin-top:1.5rem">
+      Prices in US dollars. Invoiced by MRX Consulting OÜ, Estonia. Mobile money accepted in Zambia,
+      <a href="mailto:hello@beatplan.io">ask us</a>.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Getting your data in</h2>
+    <p class="lede small">
+      Export your customers, products and invoice history from whatever you use now, as a spreadsheet
+      or a CSV. Beatplan reads the column headings, shows you what it understood, and lets you correct
+      it before anything is saved. History matters: it is what the call list is built from.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>Beatplan is a product of MRX Consulting OÜ, Estonia.</span>
+    <span><a href="mailto:hello@beatplan.io">hello@beatplan.io</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
