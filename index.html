@@ -156,6 +156,14 @@ details p{margin:.85rem 0 0; font-size:.96rem}
 .band .btn-ghost{background:transparent; border-color:rgba(255,255,255,.4); color:#fff}
 footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
 .foot{display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between; align-items:center; color:var(--faint)}
+.shots{display:grid;gap:1.6rem;grid-template-columns:1fr}
+@media(min-width:760px){.shots{grid-template-columns:repeat(3,1fr)}}
+.shot{text-align:center}
+.shot img{width:100%;max-width:300px;border:1px solid #e3e3ee;border-radius:18px;
+  box-shadow:0 10px 30px rgba(20,20,45,.10);display:block;margin:0 auto}
+.shot p{margin:.9rem auto 0;max-width:300px;font-size:.92rem;color:#555569;text-align:left}
+.shot b{color:#37327e}
+
 </style>
 </head>
 <body>
@@ -171,6 +179,7 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
       <a href="#does">What it does</a>
       <a href="#scenarios">Scenarios</a>
       <a href="#custom">Customisation</a>
+      <a href="#see">See it</a>
       <a href="#pricing">Pricing</a>
     </nav>
     <a class="btn btn-ghost" href="https://app.beatplan.io/">Sign in</a>
@@ -476,6 +485,65 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
         <p>Prefer your own developers? They get access to build against it directly. It is your data
         and your business, and we are not interested in holding either hostage.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- see it -->
+<section id="see" class="tinted">
+  <div class="wrap">
+    <div class="narrow center" style="margin:0 auto 3rem">
+      <p class="eyebrow">See it</p>
+      <h2>This is the actual product, on an actual phone</h2>
+      <p class="lede" style="margin-top:1rem">
+        Taken from a working installation in Zambia, not drawn for a website. The layout, the
+        wording and the reasoning are exactly what your people would open tomorrow morning. Only
+        the customer names and the money figures have been changed, because the business they
+        belong to is not ours to publish.
+      </p>
+    </div>
+
+    <div class="shots">
+      <div class="shot">
+        <img src="/img/app-today.png" alt="The day's plan on a salesman's phone" loading="lazy">
+        <p><b>The morning plan.</b> Not a list of everything. Six instructions in order, with the
+          reason attached to each one, computed overnight from the invoices the company already
+          produces.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-dashboard.png" alt="The director's dashboard" loading="lazy">
+        <p><b>What the owner opens.</b> Customers, overdue, never contacted, every promise the team
+          made with the date it is due, and the customers who quietly stopped buying.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-debtors.png" alt="Debtors and collections" loading="lazy">
+        <p><b>Debtors, chased by the system.</b> Who owes, how long it has been, who promised what,
+          and who is still being served while they owe you money.</p>
+      </div>
+    </div>
+
+    <div class="shots" style="margin-top:2.4rem">
+      <div class="shot">
+        <img src="/img/app-stock.png" alt="Stock, batches and expiry" loading="lazy">
+        <p><b>Stock that argues back.</b> Near expiry, dead, and anything priced below what it cost
+          you. It refuses to push what you are short of.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-customer.png" alt="A single customer record" loading="lazy">
+        <p><b>One customer, one screen.</b> What they buy, what they owe, every call ever logged,
+          and what to offer them next.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-report.png" alt="Reporting from the field" loading="lazy">
+        <p><b>Reporting without typing.</b> A salesman speaks for thirty seconds at the roadside and
+          it comes back as a written, filed report.</p>
+      </div>
+    </div>
+
+    <p class="center small muted" style="margin-top:2.6rem">
+      Every screen installs onto a phone from the browser, works offline, and belongs to one company
+      only. <a href="/assessment/">Ask for an assessment</a> and the next screens you see will have
+      your own customers in them.
+    </p>
   </div>
 </section>
 
