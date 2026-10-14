@@ -163,6 +163,11 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
   box-shadow:0 10px 30px rgba(20,20,45,.10);display:block;margin:0 auto}
 .shot p{margin:.9rem auto 0;max-width:300px;font-size:.92rem;color:#555569;text-align:left}
 .shot b{color:#37327e}
+.vidwrap{display:grid;gap:2rem;align-items:center;grid-template-columns:1fr;margin-bottom:3.2rem}
+@media(min-width:860px){.vidwrap{grid-template-columns:300px 1fr}}
+.vidwrap video{width:100%;max-width:300px;border:1px solid #e3e3ee;border-radius:18px;
+  box-shadow:0 10px 30px rgba(20,20,45,.10);display:block;margin:0 auto;background:#fff}
+.vidwrap h3{margin:0 0 .6rem}
 
 </style>
 </head>
@@ -500,6 +505,22 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
         the customer names and the money figures have been changed, because the business they
         belong to is not ours to publish.
       </p>
+    </div>
+
+    <div class="vidwrap">
+      <video controls playsinline muted preload="none"
+             poster="/img/beatplan-walkthrough-poster.jpg">
+        <source src="/img/beatplan-walkthrough.mp4" type="video/mp4">
+        Your browser cannot play this video. The screens below show the same thing.
+      </video>
+      <div>
+        <h3>Half a minute, start to finish</h3>
+        <p>The morning plan as a salesman opens it, the customer list, one customer in full, and a
+          field report that was spoken rather than typed. No narration, nothing sped up, and no
+          part of it staged: this is one account on one phone, recorded as it runs.</p>
+        <p class="small muted">Recorded from a live installation. Customer names and money figures
+          changed throughout.</p>
+      </div>
     </div>
 
     <div class="shots">
