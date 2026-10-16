@@ -73,7 +73,11 @@ section{padding:5.5rem 0}
 .tinted{background:var(--tint); border-block:1px solid var(--line)}
 header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
 .bar{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 0}
-.logo{font-weight:800; font-size:1.22rem; letter-spacing:-.035em; color:var(--ink)}
+.logo{font-weight:800; font-size:1.22rem; letter-spacing:-.035em; color:var(--ink);
+  display:inline-flex; align-items:center; gap:.52rem; text-decoration:none}
+.logo .mark{width:1.85rem; height:1.85rem; flex:none; border-radius:.5rem; background:var(--brand);
+  color:#fff; display:grid; place-items:center; font-size:1.3rem; line-height:1; letter-spacing:-.04em;
+  padding-bottom:.1rem}
 .logo b{color:var(--brand)}
 .navlinks{display:none; gap:1.6rem; font-size:.92rem; font-weight:500}
 .navlinks a{color:var(--body)}.navlinks a:hover{color:var(--ink)}
@@ -123,6 +127,7 @@ header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.9); back
 .case-grid{display:grid; gap:2rem; margin-top:2.2rem}
 @media(min-width:760px){.case-grid{grid-template-columns:repeat(4,1fr)}}
 .quote{border-left:3px solid rgba(255,255,255,.35); padding-left:1.2rem; margin-top:2.2rem; font-size:1.05rem}
+:root[data-region="eu"] .scen[data-region="eu"]{order:-1}
 .scen{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:1.6rem; box-shadow:var(--shadow)}
 .scen .where{font-size:.76rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--brand); margin-bottom:.55rem}
 .scen h4{font-size:1.02rem; margin-bottom:.5rem}
@@ -175,7 +180,7 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
 
 <header>
   <div class="wrap bar">
-    <a class="logo" href="/">beat<b>plan</b></a>
+    <a class="logo" href="/"><span class="mark" aria-hidden="true">b</span><span>beat<b>plan</b></span></a>
     <nav class="navlinks">
       <a href="#problem">The problem</a>
       <a href="#notacrm">Not a CRM</a>
@@ -221,17 +226,17 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
         <div class="device-top"><strong>Today</strong><span>Tuesday · 9 to call</span></div>
         <div class="device-body">
           <div class="row">
-            <div class="row-head"><span class="row-name">Riverside Bakery</span><span class="row-val">$14,200 / yr</span></div>
+            <div class="row-head"><span class="row-name" data-eu="Boulangerie Lenoir">Riverside Bakery</span><span class="row-val" data-eu="€14,200 / yr">$14,200 / yr</span></div>
             <p class="row-why">No order for 7 weeks. Usually orders every 12 days.</p>
             <span class="tag tag-brand">Usually buys: flour, yeast, packaging</span>
           </div>
           <div class="row">
-            <div class="row-head"><span class="row-name">Meridian Superstores</span><span class="row-val">$8,900 owing</span></div>
+            <div class="row-head"><span class="row-name" data-eu="Mercado Ribeiro">Meridian Superstores</span><span class="row-val" data-eu="€8,900 owing">$8,900 owing</span></div>
             <p class="row-why">Promised payment last Friday. Nothing received.</p>
             <span class="tag tag-alarm">60 days overdue</span>
           </div>
           <div class="row">
-            <div class="row-head"><span class="row-name">Northgate Foods</span><span class="row-val">$21,400 / yr</span></div>
+            <div class="row-head"><span class="row-name" data-eu="Nordkern Lebensmittel">Northgate Foods</span><span class="row-val" data-eu="€21,400 / yr">$21,400 / yr</span></div>
             <p class="row-why">Ordered sugar monthly for two years. Nothing since March.</p>
             <span class="tag tag-alarm">Do not offer Sunflower Oil 5L, we are short</span>
           </div>
@@ -400,49 +405,49 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
       </p>
     </div>
     <div class="grid g3">
-      <div class="scen">
+      <div class="scen" data-region="row">
         <div class="where">Spice importer · Vietnam</div>
         <h4>180 customers, two salesmen, no idea who is drifting</h4>
         <p>Restaurants and small manufacturers, each on a different cycle. The good accounts get
         visited; the quiet ones are never noticed until they are gone.</p>
         <p class="out">Every account measured against its own rhythm, not one blanket rule.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="africa">
         <div class="where">Pharmaceutical wholesaler · Kenya</div>
         <h4>Expiry is the whole business</h4>
         <p>Short-dated stock has to move first, and a batch reaching its date is money burned. The
         stock report and the sales team live in different worlds.</p>
         <p class="out">Push lists name the batch, oldest first, and refuse anything already reserved.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="eu">
         <div class="where">Building materials · Poland</div>
         <h4>Margins quietly disappearing</h4>
         <p>Costs move with the exchange rate, price lists lag behind, and nobody notices a line is
         being sold under cost until the year-end accounts.</p>
         <p class="out">An alarm the day a selling price drops below average cost.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="row">
         <div class="where">Beverage distributor · Mexico</div>
         <h4>Fifteen people on the road, patchy signal</h4>
         <p>Reps cover long routes with no reliable connection, so anything requiring a live
         connection is abandoned within a fortnight.</p>
         <p class="out">Full offline working, and voice notes instead of typing.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="row">
         <div class="where">Industrial supplies · United Arab Emirates</div>
         <h4>Credit is the real risk</h4>
         <p>Everything sells on terms. The debtor book ages faster than anyone tracks, and promises to
         pay are remembered by whoever took the call.</p>
         <p class="out">Debtors, ageing and promises recorded on the same screen as the call.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="eu">
         <div class="where">Food ingredients · Portugal</div>
         <h4>An ERP nobody in sales can use</h4>
         <p>A capable accounts system holds everything and answers nothing a salesman needs. A second
         full system is out of the question.</p>
         <p class="out">Reads the existing system, replaces nothing, and works from day one.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="eu">
         <div class="where">Real estate fund · Greece</div>
         <h4>The portfolio is fine until three things slip at once</h4>
         <p>Leases coming up for renewal, a refurbishment running past its date, and a tenant two
@@ -450,14 +455,14 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
         the quarterly meeting.</p>
         <p class="out">Every lease, job and arrear measured against its own date, and on somebody's list the morning it slips.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="eu">
         <div class="where">Professional services · Cyprus</div>
         <h4>Fee earners busy, renewals forgotten</h4>
         <p>The work gets done and billed, but nobody owns the client who has not instructed anything
         since February, and nobody chases the engagement letter that was never returned.</p>
         <p class="out">Quiet clients and unreturned documents surface as a daily list, not as a year-end surprise.</p>
       </div>
-      <div class="scen">
+      <div class="scen" data-region="africa">
         <div class="where">Manufacturer · Zambia</div>
         <h4>Four departments, four versions of the truth</h4>
         <p>Production, stores, credit control and sales each keep their own book. The director asks
@@ -669,5 +674,21 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
   </div>
 </footer>
 
+
+<script>
+/* Region comes from the browser's own time zone, so there is no IP lookup, no
+   third party, nothing to consent to and nothing to pay for. A European visitor
+   sees euros and European companies, and his own kind of business leads the
+   scenario list. Everyone else keeps the default, which is dollars, because
+   that is what MRX Consulting OU invoices in. */
+(function () {
+  var tz = '';
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { return; }
+  if (!/^Europe\//.test(tz)) return;
+  document.documentElement.setAttribute('data-region', 'eu');
+  var els = document.querySelectorAll('[data-eu]');
+  for (var i = 0; i < els.length; i++) els[i].textContent = els[i].getAttribute('data-eu');
+})();
+</script>
 </body>
 </html>
