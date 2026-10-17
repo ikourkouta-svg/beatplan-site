@@ -389,17 +389,78 @@
 
 <!-- see it -->
 <section id="see" class="tinted">
-  <div class="wrap narrow center">
-    <p class="eyebrow">See it</p>
-    <h2>We would rather show you your own data than someone else's</h2>
-    <p class="lede" style="margin:1rem auto 0">
-      Screens and a short walkthrough are being rebuilt against a demonstration company, so that
-      nothing belonging to a real customer is ever published here. Ask for an assessment and the
-      screens you see will have your own customers, your own products and your own figures in them.
-    </p>
-    <div class="btn-row" style="margin-top:2rem; justify-content:center">
-      <a class="btn btn-solid btn-lg" href="/assessment/">Book an assessment</a>
+  <div class="wrap">
+    <div class="narrow center" style="margin:0 auto 3rem">
+      <p class="eyebrow">See it</p>
+      <h2>This is the actual product, on an actual phone</h2>
+      <p class="lede" style="margin-top:1rem">
+        Every screen below is the real software, running. The company in it is not. Meridiana
+        Distribution does not exist: the customers, the products, the prices, the debts and the
+        buying history were all invented for these pictures, because the businesses we actually
+        run this for are not ours to publish. The layout, the wording and the reasoning are
+        exactly what your people would open tomorrow morning.
+      </p>
     </div>
+
+    <div class="vidwrap">
+      <video controls playsinline muted preload="none"
+             poster="/img/beatplan-walkthrough-poster.jpg">
+        <source src="/img/beatplan-walkthrough.mp4" type="video/mp4">
+        Your browser cannot play this video. The screens below show the same thing.
+      </video>
+      <div>
+        <h3>Twenty seconds, start to finish</h3>
+        <p>The morning plan as a salesman opens it, the customer list, one customer in full, and a
+          field report that was spoken rather than typed. No narration, nothing sped up, and no
+          part of it staged: one account on one phone, recorded as it runs.</p>
+        <p class="small muted">Recorded against a demonstration company built for the purpose.
+          No real customer, product or balance appears in it.</p>
+      </div>
+    </div>
+
+    <div class="shots">
+      <div class="shot">
+        <img src="/img/app-today.png" alt="The day's plan on a salesman's phone" loading="lazy">
+        <p><b>The morning plan.</b> Not a list of everything. Six instructions in order, with the
+          reason attached to each one, computed overnight from the invoices the company already
+          produces.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-dashboard.png" alt="The director's dashboard" loading="lazy">
+        <p><b>What the owner opens.</b> Customers, overdue, never contacted, every promise the team
+          made with the date it is due, and the customers who quietly stopped buying.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-debtors.png" alt="Debtors and collections" loading="lazy">
+        <p><b>Debtors, chased by the system.</b> Who owes, how long it has been, who promised what,
+          and who is still being served while they owe you money.</p>
+      </div>
+    </div>
+
+    <div class="shots" style="margin-top:2.4rem">
+      <div class="shot">
+        <img src="/img/app-stock.png" alt="Stock, batches and expiry" loading="lazy">
+        <p><b>Stock that argues back.</b> Near expiry, dead, and anything priced below what it cost
+          you. It refuses to push what you are short of.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-customer.png" alt="A single customer record" loading="lazy">
+        <p><b>One customer, one screen.</b> What they buy, what they owe, every call ever logged,
+          and what to offer them next.</p>
+      </div>
+      <div class="shot">
+        <img src="/img/app-report.png" alt="Reporting from the field" loading="lazy">
+        <p><b>Reporting without typing.</b> A salesman speaks for thirty seconds at the roadside and
+          it comes back as a written, filed report.</p>
+      </div>
+    </div>
+
+    <p class="center small muted" style="margin-top:2.6rem">
+      Every screen installs onto a phone from the browser, works offline, and belongs to one company
+      only. <a href="/questionnaire/">Answer the questionnaire</a> and we will send you a written
+      assessment, or <a href="/assessment/">ask for a live one</a> and the next screens you see will
+      have your own customers in them.
+    </p>
   </div>
 </section>
 
@@ -421,9 +482,9 @@
         <h3>1. Tell us what you need</h3>
         <p class="small muted" style="margin:.4rem 0 0">Three ways in, whichever suits you</p>
         <ul class="ticks">
-          <li>Send us an email in your own words</li>
-          <li>Answer a short questionnaire online</li>
-          <li>Or take a meeting and we assess it with you</li>
+          <li><a href="mailto:hello@beatplan.io">Send us an email</a> in your own words</li>
+          <li><a href="/questionnaire/">Answer the questionnaire</a> and we write the assessment back to you</li>
+          <li><a href="/assessment/">Or take a meeting</a> and we assess it with you</li>
         </ul>
       </div>
       <div class="plan">
@@ -445,7 +506,10 @@
           <li>Unlimited people, priced per company and never per seat</li>
           <li>Lead generation and reporting to the owners can sit inside the same monthly fee</li>
         </ul>
-        <a class="btn btn-solid" href="/assessment/">Book an assessment</a>
+        <div class="btn-row" style="margin-top:1.2rem">
+          <a class="btn btn-solid" href="/assessment/">Book an assessment</a>
+          <a class="btn btn-ghost" href="/questionnaire/">Answer the questionnaire</a>
+        </div>
       </div>
     </div>
 

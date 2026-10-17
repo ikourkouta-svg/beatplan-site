@@ -167,9 +167,13 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
   .formwrap { max-width: 640px; margin: 0 auto; }
   .field { margin-bottom: 1.1rem; }
   .field label { display:block; font-weight:700; font-size:.95rem; margin-bottom:.35rem; }
-  .field input, .field textarea { width:100%; padding:.7rem .8rem; font:inherit; font-size:1rem;
-    border:1px solid #cfcfe0; border-radius:.5rem; background:#fff; }
-  .field input:focus, .field textarea:focus { outline:2px solid #37327E; border-color:#37327E; }
+  .field input, .field select, .field textarea { width:100%; padding:.7rem .8rem; font:inherit; font-size:1rem;
+    border:1px solid #cfcfe0; border-radius:.5rem; background:#fff; color:#111827; }
+  .field select { appearance:none; background-image:
+    linear-gradient(45deg,transparent 50%,#6b7280 50%),linear-gradient(135deg,#6b7280 50%,transparent 50%);
+    background-position:calc(100% - 20px) 55%, calc(100% - 14px) 55%;
+    background-size:6px 6px,6px 6px; background-repeat:no-repeat; padding-right:2.6rem; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline:2px solid #37327E; border-color:#37327E; }
   .field textarea { min-height:120px; resize:vertical; }
   .hp { position:absolute; left:-9999px; }
   .note { font-size:.85rem; color:#6b6b80; }
@@ -209,6 +213,11 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
         actually runs on. We show you what is inside them and what is being missed, and you decide
         after that. The assessment costs nothing and commits you to nothing.
       </p>
+      <p class="lede" style="margin-top:1rem">
+        This form books a live assessment, which is a short online meeting with us. If you would
+        rather not meet anybody, <a href="/questionnaire/">answer the questionnaire instead</a> and
+        we will send you a written assessment by email.
+      </p>
     </div>
 
     <div class="formwrap">
@@ -223,6 +232,41 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
           <input id="phone" name="phone" autocomplete="tel"></div>
         <div class="field"><label for="country">Country</label>
           <input id="country" name="country" autocomplete="country-name"></div>
+        <div class="field"><label for="who">Who would be in the meeting?</label>
+          <select id="who" name="who">
+            <option value="">Please choose</option>
+            <option value="an owner or director">An owner or a director</option>
+            <option value="a manager who can approve this">A manager who can approve this</option>
+            <option value="a manager who would recommend it">A manager who would recommend it to somebody else</option>
+            <option value="someone looking into it">Somebody looking into it for now</option>
+          </select></div>
+        <div class="field"><label for="source">Where do your records live today?</label>
+          <select id="source" name="source">
+            <option value="">Please choose</option>
+            <option value="erp">An ERP, such as SAP, Odoo or similar</option>
+            <option value="accounting">Accounting software, such as Sage, Xero or QuickBooks</option>
+            <option value="spreadsheets">Spreadsheets</option>
+            <option value="paper">Paper, mostly</option>
+            <option value="mixed">More than one of these</option>
+            <option value="none">Nothing written down in one place</option>
+          </select></div>
+        <div class="field"><label for="people">How many people would use it?</label>
+          <select id="people" name="people">
+            <option value="">Please choose</option>
+            <option value="1 to 4">1 to 4</option>
+            <option value="5 to 15">5 to 15</option>
+            <option value="16 to 40">16 to 40</option>
+            <option value="41 to 100">41 to 100</option>
+            <option value="more than 100">More than 100</option>
+          </select></div>
+        <div class="field"><label for="timing">When would you want it working?</label>
+          <select id="timing" name="timing">
+            <option value="">Please choose</option>
+            <option value="as soon as possible">As soon as possible</option>
+            <option value="this quarter">This quarter</option>
+            <option value="this year">Some time this year</option>
+            <option value="no date yet">No date yet, we are looking</option>
+          </select></div>
         <div class="field"><label for="about">What does the business do, and where does it hurt?</label>
           <textarea id="about" name="about" placeholder="How many people sell, how many customers you carry, and what is going wrong today."></textarea></div>
         <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>

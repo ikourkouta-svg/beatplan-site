@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ερωτηματολόγιο αξιολόγησης | Beatplan</title>
+<meta name="description" content="Απαντήστε δώδεκα ερωτήσεις για την επιχείρησή σας και σας στέλνουμε γραπτή αξιολόγηση Beatplan με email. Χωρίς συνάντηση, χωρίς πωλητή, χωρίς κόστος.">
+<meta name="theme-color" content="#37327e">
+<link rel="canonical" href="https://beatplan.io/el/questionnaire/">
+
+<meta property="og:site_name" content="Beatplan">
+<meta property="og:title" content="Γραπτή αξιολόγηση, χωρίς συνάντηση">
+<meta property="og:description" content="Απαντήστε δώδεκα ερωτήσεις και σας στέλνουμε γραπτή αξιολόγηση με email. Χωρίς συνάντηση, χωρίς πωλητή, χωρίς κόστος.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beatplan.io/el/questionnaire/">
+<meta property="og:locale" content="el_GR">
+<meta property="og:image" content="https://beatplan.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app.css">
+<style>
+  .formwrap{max-width:44rem; margin:0 auto}
+  .qblock{background:#fff; border:1px solid var(--line); border-radius:var(--r);
+    padding:1.6rem; box-shadow:var(--shadow); margin-bottom:1.6rem}
+  .qblock > h3{margin:0 0 .3rem}
+  .qblock > .small{margin:0 0 1.3rem; color:var(--faint)}
+  .field{margin-bottom:1.1rem}
+  .field > label{display:block; font-weight:700; font-size:.95rem; margin-bottom:.35rem}
+  .field input[type=text], .field input[type=email], .field input[type=tel],
+  .field input[type=url], .field select, .field textarea{
+    width:100%; padding:.7rem .8rem; font:inherit; font-size:1rem;
+    border:1px solid #cfcfe0; border-radius:.5rem; background:#fff; color:var(--ink)}
+  .field select{appearance:none; background-image:
+    linear-gradient(45deg,transparent 50%,#6b7280 50%),linear-gradient(135deg,#6b7280 50%,transparent 50%);
+    background-position:calc(100% - 20px) 55%, calc(100% - 14px) 55%;
+    background-size:6px 6px,6px 6px; background-repeat:no-repeat; padding-right:2.6rem}
+  .field :focus{outline:2px solid var(--brand); border-color:var(--brand)}
+  .field textarea{min-height:110px; resize:vertical}
+  .ticks{display:grid; gap:.55rem}
+  @media(min-width:620px){.ticks{grid-template-columns:1fr 1fr}}
+  .tick{display:flex; gap:.6rem; align-items:flex-start; font-size:.95rem;
+    border:1px solid var(--line); border-radius:.6rem; padding:.65rem .75rem; cursor:pointer}
+  .tick:hover{border-color:var(--brand)}
+  .tick input{margin-top:.25rem; flex:none; width:1rem; height:1rem; accent-color:var(--brand)}
+  .hp{position:absolute; left:-9999px}
+  .note{font-size:.85rem; color:var(--faint)}
+  #msg{margin-top:1rem; padding:.9rem 1rem; border-radius:.5rem; display:none}
+  #msg.ok{display:block; background:var(--good-soft); border:1px solid var(--good)}
+  #msg.bad{display:block; background:var(--alarm-soft); border:1px solid var(--alarm)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="/el/"><span class="mark" aria-hidden="true">b</span><span>beat<b>plan</b></span></a>
+    <nav class="navlinks">
+      <a href="/el/#problem">Το πρόβλημα</a>
+      <a href="/el/#notacrm">Δεν είναι CRM</a>
+      <a href="/el/#how">Πώς δουλεύει</a>
+      <a href="/el/#does">Τι κάνει</a>
+      <a href="/el/#see">Δείτε το</a>
+      <a href="/el/#start">Αξιολόγηση</a>
+    </nav>
+    <a class="btn btn-ghost" href="https://app.beatplan.io/">Σύνδεση</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin:0 auto 3rem">
+      <p class="eyebrow">Το ερωτηματολόγιο</p>
+      <h2>Πάρτε την αξιολόγηση χωρίς να συναντήσετε κανέναν</h2>
+      <p class="lede" style="margin-top:1rem">
+        Δώδεκα ερωτήσεις, περίπου τέσσερα λεπτά. Διαβάζουμε τις απαντήσεις σας και σας στέλνουμε
+        γραπτή αξιολόγηση με email, με τα δικά σας λόγια και για τη δική σας επιχείρηση: τι πιθανότατα
+        ξεφεύγει μέσα στα στοιχεία που ήδη κρατάτε, και τι θα έκανε το σύστημα για το καθένα. Χωρίς
+        συνάντηση, χωρίς πωλητή, χωρίς κόστος και χωρίς δέσμευση. Αν προτιμάτε να το συζητήσετε με
+        κάποιον, <a href="/el/assessment/">ζητήστε ζωντανή αξιολόγηση</a>.
+      </p>
+    </div>
+
+    <div class="formwrap">
+      <form id="f" novalidate>
+
+        <div class="qblock">
+          <h3>Ποιος είστε</h3>
+          <p class="small">Για να απευθύνεται η αξιολόγηση σε κάποιον και να φτάσει κάπου.</p>
+          <div class="field"><label for="company">Εταιρεία</label>
+            <input type="text" id="company" name="company" required autocomplete="organization"></div>
+          <div class="field"><label for="name">Το όνομά σας</label>
+            <input type="text" id="name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="email">Email, εκεί που θα σταλεί η αξιολόγηση</label>
+            <input type="email" id="email" name="email" required autocomplete="email"></div>
+          <div class="field"><label for="phone">Τηλέφωνο, με τον κωδικό χώρας</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+          <div class="field"><label for="country">Χώρα</label>
+            <input type="text" id="country" name="country" autocomplete="country-name"></div>
+          <div class="field"><label for="site">Ιστοσελίδα, αν υπάρχει</label>
+            <input type="text" id="site" name="site" placeholder="example.com"></div>
+        </div>
+
+        <div class="qblock">
+          <h3>Τι είναι η επιχείρηση</h3>
+          <p class="small">Αυτό καθορίζει τα ουσιαστικά. Η μηχανή είναι η ίδια για όλους. Αυτό που
+            αλλάζει είναι αν διαβάζει τιμολόγια ή μισθωτήρια.</p>
+          <div class="field"><label for="sector">Ποιο από αυτά είναι πιο κοντά;</label>
+            <select id="sector" name="sector">
+              <option value="">Επιλέξτε</option>
+              <option value="distribution">Διανομή ή χονδρεμπόριο</option>
+              <option value="property">Ακίνητα, real estate ή fund</option>
+              <option value="services">Επαγγελματικές υπηρεσίες</option>
+              <option value="manufacturing">Βιομηχανία</option>
+              <option value="retail">Λιανικό εμπόριο</option>
+              <option value="other">Κάτι άλλο</option>
+            </select></div>
+          <div class="field"><label for="people">Πόσα άτομα εργάζονται εκεί;</label>
+            <select id="people" name="people">
+              <option value="">Επιλέξτε</option>
+              <option value="1 έως 4">1 έως 4</option>
+              <option value="5 έως 15">5 έως 15</option>
+              <option value="16 έως 40">16 έως 40</option>
+              <option value="41 έως 100">41 έως 100</option>
+              <option value="πάνω από 100">Πάνω από 100</option>
+            </select></div>
+          <div class="field"><label>Ποια τμήματα θα αφορούσε;</label>
+            <div class="ticks">
+              <label class="tick"><input type="checkbox" name="departments" value="Πωλήσεις"><span>Πωλήσεις ή μισθώσεις</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Λογιστήριο"><span>Λογιστήριο και εισπράξεις</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Αποθήκη"><span>Αποθήκη ή απόθεμα</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Λειτουργίες ή πεδίο"><span>Λειτουργίες ή πεδίο</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Συντήρηση"><span>Συντήρηση ή service</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Διοίκηση"><span>Διοίκηση και ιδιοκτησία</span></label>
+            </div></div>
+          <div class="field"><label for="scale">Περίπου πόσοι πελάτες, μισθωτές ή εντολείς υπάρχουν στα βιβλία;</label>
+            <input type="text" id="scale" name="scale" placeholder="Ένα στρογγυλό νούμερο αρκεί"></div>
+        </div>
+
+        <div class="qblock">
+          <h3>Πού βρίσκονται σήμερα τα στοιχεία σας</h3>
+          <p class="small">Το Beatplan διαβάζει αυτά που ήδη παράγετε. Δεν ζητά από κανέναν να
+            πληκτρολογήσει το ίδιο πράγμα δεύτερη φορά, οπότε αυτή η ερώτηση καθορίζει όλα τα
+            υπόλοιπα.</p>
+          <div class="field"><label for="source">Τι κρατά το ιστορικό;</label>
+            <select id="source" name="source">
+              <option value="">Επιλέξτε</option>
+              <option value="erp">ERP, όπως SAP, Odoo ή παρόμοιο</option>
+              <option value="accounting">Λογιστικό πρόγραμμα, όπως Softone, Entersoft ή Epsilon</option>
+              <option value="spreadsheets">Υπολογιστικά φύλλα</option>
+              <option value="paper">Κυρίως χαρτί</option>
+              <option value="mixed">Περισσότερα από ένα από αυτά</option>
+              <option value="none">Τίποτα γραμμένο σε ένα σημείο</option>
+            </select></div>
+          <div class="field"><label for="reporting">Πώς ενημερώνεται σήμερα η ιδιοκτησία;</label>
+            <select id="reporting" name="reporting">
+              <option value="">Επιλέξτε</option>
+              <option value="γραπτή αναφορά σε τακτό πρόγραμμα">Με γραπτή αναφορά, σε τακτό πρόγραμμα</option>
+              <option value="συνάντηση">Με συνάντηση, όποτε υπάρχει χρόνος</option>
+              <option value="ρωτώντας">Ρωτώντας, όταν κάτι δεν πάει καλά</option>
+              <option value="καθόλου">Στην πράξη δεν γίνεται</option>
+            </select></div>
+        </div>
+
+        <div class="qblock">
+          <h3>Τι ξεφεύγει</h3>
+          <p class="small">Σημειώστε ό,τι ισχύει. Για κάθε ένα που σημειώνετε, η αξιολόγηση σας λέει
+            τι κάνει το σύστημα γι' αυτό. Τίποτα δεν βαθμολογείται και τίποτα δεν κρίνεται.</p>
+          <div class="field">
+            <div class="ticks">
+              <label class="tick"><input type="checkbox" name="slips" value="quiet"><span>Πελάτες ή μισθωτές σταματούν σιωπηλά και κανείς δεν το προσέχει</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="debt"><span>Οφειλές μένουν ανείσπρακτες</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="stock"><span>Απόθεμα μένει ή λήγει</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="margin"><span>Πουλιούνται πράγματα κάτω από το κόστος</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="promises"><span>Υποσχέσεις προς πελάτες δεν τηρούνται</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="plan"><span>Οι άνθρωποι ξεκινούν την ημέρα χωρίς πρόγραμμα</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="reporting"><span>Η ιδιοκτησία δεν ενημερώνεται για τίποτα</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="typing"><span>Κανείς δεν συμπληρώνει τίποτα, άρα τίποτα δεν καταγράφεται</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="silos"><span>Τα τμήματα δεν βλέπουν τι ξέρουν τα άλλα</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="gut"><span>Οι αποφάσεις παίρνονται από μνήμης</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="qblock">
+          <h3>Πώς θα ήταν αν πήγαινε καλά</h3>
+          <p class="small">Μία πρόταση αρκεί. Αυτή είναι η γραμμή πάνω στην οποία θα μετρηθεί το
+            build.</p>
+          <div class="field"><label for="goal">Αν αυτό δούλευε, τι θα ήταν διαφορετικό σε έξι μήνες;</label>
+            <textarea id="goal" name="goal" placeholder="Για παράδειγμα: θέλω να ξέρω κάθε Δευτέρα πρωί τι έχει ξεφύγει, χωρίς να ρωτήσω κανέναν."></textarea></div>
+          <div class="field"><label for="notes">Οτιδήποτε άλλο θα έπρεπε να ξέρουμε</label>
+            <textarea id="notes" name="notes"></textarea></div>
+        </div>
+
+        <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn btn-solid btn-lg" type="submit" id="go">Στείλτε μου την αξιολόγηση</button>
+        <p class="note" style="margin-top:.9rem">Η αξιολόγηση έρχεται με email, συνήθως μέσα σε ένα
+          λεπτό. Δεν δημοσιεύουμε τίποτα, δεν δίνουμε τα στοιχεία σας σε κανέναν, και δεν ζητάμε τα
+          δεδομένα σας πριν αποφασίσετε εσείς ότι θέλετε να προχωρήσετε.</p>
+        <div id="msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="tinted" style="padding:2.5rem 0; margin-top:3rem">
+  <div class="wrap small muted center">
+    <a href="/el/">Beatplan</a> &middot; <a href="/el/assessment/">Ζωντανή αξιολόγηση</a> &middot;
+    <a href="/privacy/">Απόρρητο</a> &middot; <a href="/terms/">Όροι</a>
+  </div>
+</footer>
+
+<script>
+  const f = document.getElementById("f"), msg = document.getElementById("msg"), go = document.getElementById("go");
+  f.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fd = new FormData(f);
+    // getAll, not Object.fromEntries: the tick boxes repeat a name, and
+    // fromEntries keeps only the last one, which would silently throw away
+    // every answer but one on the question that matters most.
+    const body = { lang: "el", departments: fd.getAll("departments"), slips: fd.getAll("slips") };
+    for (const [k, v] of fd.entries()) if (k !== "departments" && k !== "slips") body[k] = v;
+    if (!body.company || !body.name || !body.email) {
+      msg.className = "bad";
+      msg.textContent = "Εταιρεία, όνομα και email, παρακαλώ. Τα υπόλοιπα είναι προαιρετικά.";
+      return;
+    }
+    go.disabled = true; go.textContent = "Αποστολή";
+    try {
+      const r = await fetch("https://forms.work-cut.com/api/beatplan-questionnaire", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+      });
+      if (!r.ok) throw new Error();
+      f.reset();
+      msg.className = "ok";
+      msg.textContent = "Έγινε. Η αξιολόγησή σας έρχεται σε εκείνη τη διεύθυνση. Αν δεν φτάσει μέσα σε λίγα λεπτά, κοιτάξτε στα ανεπιθύμητα πριν ξαναπροσπαθήσετε.";
+    } catch {
+      msg.className = "bad";
+      msg.innerHTML = 'Δεν πέρασε. Στείλτε μας email στο <a href="mailto:hello@beatplan.io">hello@beatplan.io</a> και το αναλαμβάνουμε από εκεί.';
+    } finally {
+      go.disabled = false; go.textContent = "Στείλτε μου την αξιολόγηση";
+    }
+  });
+</script>
+</body>
+</html>

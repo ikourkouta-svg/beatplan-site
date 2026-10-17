@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assessment questionnaire | Beatplan</title>
+<meta name="description" content="Answer twelve questions about your business and we send you a written Beatplan assessment by email. No meeting, no salesman, no cost. It names what is slipping in the records you already keep and what the system would do about each one.">
+<meta name="theme-color" content="#37327e">
+<link rel="canonical" href="https://beatplan.io/questionnaire/">
+
+<meta property="og:site_name" content="Beatplan">
+<meta property="og:title" content="Get a written assessment, without a meeting">
+<meta property="og:description" content="Answer twelve questions about your business and we send you a written assessment by email. No meeting, no salesman, no cost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beatplan.io/questionnaire/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://beatplan.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app.css">
+<style>
+  /* Only what the form needs. Everything else is shared with the homepage, so
+     the two cannot drift apart. */
+  .formwrap{max-width:44rem; margin:0 auto}
+  .qblock{background:#fff; border:1px solid var(--line); border-radius:var(--r);
+    padding:1.6rem; box-shadow:var(--shadow); margin-bottom:1.6rem}
+  .qblock > h3{margin:0 0 .3rem}
+  .qblock > .small{margin:0 0 1.3rem; color:var(--faint)}
+  .field{margin-bottom:1.1rem}
+  .field > label{display:block; font-weight:700; font-size:.95rem; margin-bottom:.35rem}
+  .field input[type=text], .field input[type=email], .field input[type=tel],
+  .field input[type=url], .field select, .field textarea{
+    width:100%; padding:.7rem .8rem; font:inherit; font-size:1rem;
+    border:1px solid #cfcfe0; border-radius:.5rem; background:#fff; color:var(--ink)}
+  .field select{appearance:none; background-image:
+    linear-gradient(45deg,transparent 50%,#6b7280 50%),linear-gradient(135deg,#6b7280 50%,transparent 50%);
+    background-position:calc(100% - 20px) 55%, calc(100% - 14px) 55%;
+    background-size:6px 6px,6px 6px; background-repeat:no-repeat; padding-right:2.6rem}
+  .field :focus{outline:2px solid var(--brand); border-color:var(--brand)}
+  .field textarea{min-height:110px; resize:vertical}
+  .ticks{display:grid; gap:.55rem}
+  @media(min-width:620px){.ticks{grid-template-columns:1fr 1fr}}
+  .tick{display:flex; gap:.6rem; align-items:flex-start; font-size:.95rem;
+    border:1px solid var(--line); border-radius:.6rem; padding:.65rem .75rem; cursor:pointer}
+  .tick:hover{border-color:var(--brand)}
+  .tick input{margin-top:.25rem; flex:none; width:1rem; height:1rem; accent-color:var(--brand)}
+  .hp{position:absolute; left:-9999px}
+  .note{font-size:.85rem; color:var(--faint)}
+  #msg{margin-top:1rem; padding:.9rem 1rem; border-radius:.5rem; display:none}
+  #msg.ok{display:block; background:var(--good-soft); border:1px solid var(--good)}
+  #msg.bad{display:block; background:var(--alarm-soft); border:1px solid var(--alarm)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="/"><span class="mark" aria-hidden="true">b</span><span>beat<b>plan</b></span></a>
+    <nav class="navlinks">
+      <a href="/#problem">The problem</a>
+      <a href="/#notacrm">Not a CRM</a>
+      <a href="/#how">How it works</a>
+      <a href="/#does">What it does</a>
+      <a href="/#see">See it</a>
+      <a href="/#start">Assessment</a>
+    </nav>
+    <a class="btn btn-ghost" href="https://app.beatplan.io/">Sign in</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="narrow center" style="margin:0 auto 3rem">
+      <p class="eyebrow">The questionnaire</p>
+      <h2>Get the assessment without meeting anybody</h2>
+      <p class="lede" style="margin-top:1rem">
+        Twelve questions, about four minutes. We read your answers and send you a written assessment
+        by email, in your own words and about your own business: what is probably slipping in the
+        records you already keep, and what the system would do about each one. No meeting, no
+        salesman, no cost and no obligation. If you would rather talk it through with somebody
+        instead, <a href="/assessment/">ask for a live assessment</a>.
+      </p>
+    </div>
+
+    <div class="formwrap">
+      <form id="f" novalidate>
+
+        <div class="qblock">
+          <h3>Who you are</h3>
+          <p class="small">So the assessment can be addressed to somebody and reach them.</p>
+          <div class="field"><label for="company">Company</label>
+            <input type="text" id="company" name="company" required autocomplete="organization"></div>
+          <div class="field"><label for="name">Your name</label>
+            <input type="text" id="name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="email">Email, where the assessment goes</label>
+            <input type="email" id="email" name="email" required autocomplete="email"></div>
+          <div class="field"><label for="phone">Telephone, with the country code</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+          <div class="field"><label for="country">Country</label>
+            <input type="text" id="country" name="country" autocomplete="country-name"></div>
+          <div class="field"><label for="site">Website, if you have one</label>
+            <input type="text" id="site" name="site" placeholder="example.com"></div>
+        </div>
+
+        <div class="qblock">
+          <h3>What the business is</h3>
+          <p class="small">This decides the nouns. The engine is the same for everybody; what
+            changes is whether it is reading invoices or leases.</p>
+          <div class="field"><label for="sector">Which of these is closest?</label>
+            <select id="sector" name="sector">
+              <option value="">Please choose</option>
+              <option value="distribution">Distribution or wholesale</option>
+              <option value="property">Property, real estate or a fund</option>
+              <option value="services">Professional services</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="retail">Retail</option>
+              <option value="other">Something else</option>
+            </select></div>
+          <div class="field"><label for="people">How many people work there?</label>
+            <select id="people" name="people">
+              <option value="">Please choose</option>
+              <option value="1 to 4">1 to 4</option>
+              <option value="5 to 15">5 to 15</option>
+              <option value="16 to 40">16 to 40</option>
+              <option value="41 to 100">41 to 100</option>
+              <option value="more than 100">More than 100</option>
+            </select></div>
+          <div class="field"><label>Which departments would this touch?</label>
+            <div class="ticks">
+              <label class="tick"><input type="checkbox" name="departments" value="Sales"><span>Sales or letting</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Accounts"><span>Accounts and collections</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Warehouse or stock"><span>Warehouse or stock</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Operations or field"><span>Operations or field</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Maintenance"><span>Maintenance or service</span></label>
+              <label class="tick"><input type="checkbox" name="departments" value="Management"><span>Management and ownership</span></label>
+            </div></div>
+          <div class="field"><label for="scale">Roughly how many customers, tenants or clients are on the books?</label>
+            <input type="text" id="scale" name="scale" placeholder="A round number is fine"></div>
+        </div>
+
+        <div class="qblock">
+          <h3>Where your records live today</h3>
+          <p class="small">Beatplan reads what you already produce. It does not ask anybody to type
+            the same thing twice, so this is the question that shapes everything else.</p>
+          <div class="field"><label for="source">What holds the history?</label>
+            <select id="source" name="source">
+              <option value="">Please choose</option>
+              <option value="erp">An ERP, such as SAP, Odoo or similar</option>
+              <option value="accounting">Accounting software, such as Sage, Xero or QuickBooks</option>
+              <option value="spreadsheets">Spreadsheets</option>
+              <option value="paper">Paper, mostly</option>
+              <option value="mixed">More than one of these</option>
+              <option value="none">Nothing written down in one place</option>
+            </select></div>
+          <div class="field"><label for="reporting">How does the ownership get reported to now?</label>
+            <select id="reporting" name="reporting">
+              <option value="">Please choose</option>
+              <option value="a scheduled written report">A written report, on a schedule</option>
+              <option value="a meeting">A meeting, when there is time</option>
+              <option value="by asking">By asking people when something feels wrong</option>
+              <option value="not at all">It does not really happen</option>
+            </select></div>
+        </div>
+
+        <div class="qblock">
+          <h3>What slips</h3>
+          <p class="small">Tick everything that is true. Each one you tick comes back in the
+            assessment with what the system does about it. Nothing is scored and nothing is
+            judged.</p>
+          <div class="field">
+            <div class="ticks">
+              <label class="tick"><input type="checkbox" name="slips" value="quiet"><span>Customers or tenants quietly stop and nobody notices</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="debt"><span>Money owed sits uncollected</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="stock"><span>Stock goes dead or out of date</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="margin"><span>Things get sold below cost</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="promises"><span>Promises to customers are not kept</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="plan"><span>People start the day with no plan</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="reporting"><span>The ownership is not being told anything</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="typing"><span>Nobody fills anything in, so nothing is recorded</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="silos"><span>Departments do not see what the others know</span></label>
+              <label class="tick"><input type="checkbox" name="slips" value="gut"><span>Decisions get made on memory</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="qblock">
+          <h3>What good would look like</h3>
+          <p class="small">One sentence is enough. This is the line the build would be measured
+            against.</p>
+          <div class="field"><label for="goal">If this worked, what would be different in six months?</label>
+            <textarea id="goal" name="goal" placeholder="For example: I want to know every Monday morning what has slipped, without asking anybody."></textarea></div>
+          <div class="field"><label for="notes">Anything else we should know</label>
+            <textarea id="notes" name="notes"></textarea></div>
+        </div>
+
+        <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn btn-solid btn-lg" type="submit" id="go">Send me the assessment</button>
+        <p class="note" style="margin-top:.9rem">The assessment arrives by email, usually within a
+          minute. We do not publish anything, we do not pass your details to anybody, and we do not
+          ask for your data until you have decided you want to go further.</p>
+        <div id="msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="tinted" style="padding:2.5rem 0; margin-top:3rem">
+  <div class="wrap small muted center">
+    <a href="/">Beatplan</a> &middot; <a href="/assessment/">Live assessment</a> &middot;
+    <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a>
+  </div>
+</footer>
+
+<script>
+  const f = document.getElementById("f"), msg = document.getElementById("msg"), go = document.getElementById("go");
+  f.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fd = new FormData(f);
+    // getAll, not Object.fromEntries: the tick boxes repeat a name, and
+    // fromEntries keeps only the last one, which would silently throw away
+    // every answer but one on the question that matters most.
+    const body = { lang: "en", departments: fd.getAll("departments"), slips: fd.getAll("slips") };
+    for (const [k, v] of fd.entries()) if (k !== "departments" && k !== "slips") body[k] = v;
+    if (!body.company || !body.name || !body.email) {
+      msg.className = "bad";
+      msg.textContent = "Company, your name and an email address, please. The rest is optional.";
+      return;
+    }
+    go.disabled = true; go.textContent = "Sending";
+    try {
+      const r = await fetch("https://forms.work-cut.com/api/beatplan-questionnaire", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+      });
+      if (!r.ok) throw new Error();
+      f.reset();
+      msg.className = "ok";
+      msg.textContent = "Done. Your assessment is on its way to that address. If it has not arrived in a few minutes, look in the spam folder before you try again.";
+    } catch {
+      msg.className = "bad";
+      msg.innerHTML = 'That did not go through. Email us at <a href="mailto:hello@beatplan.io">hello@beatplan.io</a> and we will pick it up from there.';
+    } finally {
+      go.disabled = false; go.textContent = "Send me the assessment";
+    }
+  });
+</script>
+</body>
+</html>

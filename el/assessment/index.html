@@ -167,9 +167,13 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
   .formwrap { max-width: 640px; margin: 0 auto; }
   .field { margin-bottom: 1.1rem; }
   .field label { display:block; font-weight:700; font-size:.95rem; margin-bottom:.35rem; }
-  .field input, .field textarea { width:100%; padding:.7rem .8rem; font:inherit; font-size:1rem;
-    border:1px solid #cfcfe0; border-radius:.5rem; background:#fff; }
-  .field input:focus, .field textarea:focus { outline:2px solid #37327E; border-color:#37327E; }
+  .field select { appearance:none; background-image:
+    linear-gradient(45deg,transparent 50%,#6b7280 50%),linear-gradient(135deg,#6b7280 50%,transparent 50%);
+    background-position:calc(100% - 20px) 55%, calc(100% - 14px) 55%;
+    background-size:6px 6px,6px 6px; background-repeat:no-repeat; padding-right:2.6rem; }
+  .field input, .field select, .field textarea { width:100%; padding:.7rem .8rem; font:inherit; font-size:1rem;
+    border:1px solid #cfcfe0; border-radius:.5rem; background:#fff; color:#111827; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline:2px solid #37327E; border-color:#37327E; }
   .field textarea { min-height:120px; resize:vertical; }
   .hp { position:absolute; left:-9999px; }
   .note { font-size:.85rem; color:#6b6b80; }
@@ -210,6 +214,12 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
         μέσα και τι χάνεται, και αποφασίζετε μετά από αυτό. Η αξιολόγηση δεν κοστίζει τίποτα
         και δεν σας δεσμεύει σε τίποτα.
       </p>
+      <p class="lede" style="margin-top:1rem">
+        Αυτή η φόρμα κλείνει ζωντανή αξιολόγηση, δηλαδή μια σύντομη διαδικτυακή συνάντηση μαζί μας.
+        Αν προτιμάτε να μην συναντήσετε κανέναν,
+        <a href="/el/questionnaire/">συμπληρώστε το ερωτηματολόγιο</a> και σας στέλνουμε γραπτή
+        αξιολόγηση με email.
+      </p>
     </div>
 
     <div class="formwrap">
@@ -224,6 +234,41 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
           <input id="phone" name="phone" autocomplete="tel"></div>
         <div class="field"><label for="country">Χώρα</label>
           <input id="country" name="country" autocomplete="country-name"></div>
+        <div class="field"><label for="who">Ποιος θα είναι στη συνάντηση;</label>
+          <select id="who" name="who">
+            <option value="">Επιλέξτε</option>
+            <option value="an owner or director">Ιδιοκτήτης ή διευθυντής</option>
+            <option value="a manager who can approve this">Στέλεχος που μπορεί να το εγκρίνει</option>
+            <option value="a manager who would recommend it">Στέλεχος που θα το εισηγηθεί σε κάποιον άλλο</option>
+            <option value="someone looking into it">Κάποιος που το ερευνά προς το παρόν</option>
+          </select></div>
+        <div class="field"><label for="source">Πού βρίσκονται σήμερα τα στοιχεία σας;</label>
+          <select id="source" name="source">
+            <option value="">Επιλέξτε</option>
+            <option value="erp">ERP, όπως SAP, Odoo ή παρόμοιο</option>
+            <option value="accounting">Λογιστικό πρόγραμμα, όπως Softone, Entersoft ή Epsilon</option>
+            <option value="spreadsheets">Υπολογιστικά φύλλα</option>
+            <option value="paper">Κυρίως χαρτί</option>
+            <option value="mixed">Περισσότερα από ένα από αυτά</option>
+            <option value="none">Τίποτα γραμμένο σε ένα σημείο</option>
+          </select></div>
+        <div class="field"><label for="people">Πόσα άτομα θα το χρησιμοποιούσαν;</label>
+          <select id="people" name="people">
+            <option value="">Επιλέξτε</option>
+            <option value="1 to 4">1 έως 4</option>
+            <option value="5 to 15">5 έως 15</option>
+            <option value="16 to 40">16 έως 40</option>
+            <option value="41 to 100">41 έως 100</option>
+            <option value="more than 100">Πάνω από 100</option>
+          </select></div>
+        <div class="field"><label for="timing">Πότε θα θέλατε να δουλεύει;</label>
+          <select id="timing" name="timing">
+            <option value="">Επιλέξτε</option>
+            <option value="as soon as possible">Το συντομότερο δυνατό</option>
+            <option value="this quarter">Μέσα στο τρίμηνο</option>
+            <option value="this year">Κάποια στιγμή φέτος</option>
+            <option value="no date yet">Χωρίς ημερομηνία ακόμη, ψαχνόμαστε</option>
+          </select></div>
         <div class="field"><label for="about">Τι κάνει η επιχείρηση, και πού πονάει;</label>
           <textarea id="about" name="about" placeholder="Πόσοι πουλάνε, πόσους πελάτες κρατάτε, και τι πάει στραβά σήμερα."></textarea></div>
         <div class="hp"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
