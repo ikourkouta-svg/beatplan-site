@@ -34,7 +34,7 @@
       <a href="#does">Τι κάνει</a>
       <a href="#scenarios">Περιπτώσεις</a>
       <a href="#custom">Προσαρμογή</a>
-      <a href="/el/video/">Το βίντεο</a>
+      <a href="#watch">Σε 2 λεπτά</a>
       <a href="#start">Αξιολόγηση</a>
       <a href="/?lang=en" hreflang="en">EN</a>
     </nav>
@@ -46,17 +46,60 @@
 <section class="hero">
   <div class="wrap">
   <div class="hero-grid">
-    <div>
+    <div class="hero-copy">
       <div class="pill"><span class="dot"></span> Δεν είναι CRM. Τίποτα προς συμπλήρωση.</div>
       <h1>Κάθε πρωί, το πλάνο.<br>Όχι άλλη μια βάση δεδομένων.</h1>
-      <p class="lede" style="margin-top:1.2rem">
+    </div>
+
+    <div class="hero-vid">
+      <div class="herovid" id="watch">
+        <p class="vlabel">Καταλάβετε το Beatplan σε 2 λεπτά</p>
+        <video controls playsinline preload="none"
+               poster="/img/beatplan-video-el-poster.jpg">
+          <source src="/img/beatplan-video-el.mp4" type="video/mp4">
+          Ο browser σας δεν μπορεί να το παίξει. <a href="/el/video/">Ανοίξτε το σε δική του σελίδα.</a>
+        </video>
+        <p class="caption">Τι ανοίγει ο πωλητής, τι ανοίγουν οι εισπράξεις, τι βλέπει η διοίκηση,
+          και τι υπολόγισε το Beatplan μέσα στη νύχτα.</p>
+      </div>
+
+      <div class="herodev">
+        <div class="device">
+          <div class="device-top"><strong>Σήμερα</strong><span>Τρίτη &middot; 9 κλήσεις</span></div>
+          <div class="device-body">
+            <div class="row">
+              <div class="row-head"><span class="row-name">Αρτοποιία Λενάκη</span><span class="row-val">&euro;14.200 / έτος</span></div>
+              <p class="row-why">Καμία παραγγελία 7 εβδομάδες. Συνήθως παραγγέλνει κάθε 12 ημέρες.</p>
+              <span class="tag tag-brand">Αγοράζει συνήθως: αλεύρι, μαγιά, συσκευασία</span>
+            </div>
+            <div class="row">
+              <div class="row-head"><span class="row-name">Μίνι Μάρκετ Ριζάκη</span><span class="row-val">&euro;8.900 οφειλή</span></div>
+              <p class="row-why">Υποσχέθηκε πληρωμή την περασμένη Παρασκευή. Δεν ήρθε τίποτα.</p>
+              <span class="tag tag-alarm">60 ημέρες ληξιπρόθεσμο</span>
+            </div>
+            <div class="row">
+              <div class="row-head"><span class="row-name">Τρόφιμα Βορρά</span><span class="row-val">&euro;21.400 / έτος</span></div>
+              <p class="row-why">Παρήγγελνε ζάχαρη κάθε μήνα επί δύο χρόνια. Τίποτα από τον Μάρτιο.</p>
+              <span class="tag tag-alarm">Μην προσφέρετε Ηλιέλαιο 5L, έχουμε έλλειψη</span>
+            </div>
+          </div>
+        </div>
+        <p class="caption">Η πραγματική οθόνη που ανοίγει ο πωλητής σας. Χωρίς dashboard, χωρίς πεδίο αναζήτησης.</p>
+      </div>
+    </div>
+
+    <div class="hero-lede">
+      <p class="lede">
         Στη διανομή, <em>beat</em> λέγεται ο γύρος που καλύπτει ένας πωλητής, και από εκεί ξεκίνησε.
         Σήμερα τρέχει με τον ίδιο τρόπο και την υπόλοιπη εταιρεία: διαβάζει τα αρχεία που ήδη
         παράγετε, βρίσκει τι ξέφυγε, και δίνει σε κάθε άνθρωπο και κάθε τμήμα
         <strong style="color:var(--ink)">τη λίστα του για το πρωί, με τον λόγο γραμμένο δίπλα</strong>.
         Χωρίς pipeline. Χωρίς στάδια. Χωρίς να συμπληρώσει κανείς τίποτα πρώτα.
       </p>
-      <div class="btn-row" style="margin-top:2rem">
+    </div>
+
+    <div class="hero-cta">
+      <div class="btn-row">
         <a class="btn btn-solid btn-lg" href="/el/assessment/">Ζητήστε αξιολόγηση</a>
         <a class="btn btn-ghost btn-lg" href="#how">Πώς δουλεύει</a>
       </div>
@@ -67,29 +110,6 @@
         <span>Κάθε τμήμα, όχι μόνο οι πωλήσεις</span>
         <span>Τιμή ανά εταιρεία</span>
       </div>
-    </div>
-    <div>
-      <div class="device">
-        <div class="device-top"><strong>Σήμερα</strong><span>Τρίτη · 9 κλήσεις</span></div>
-        <div class="device-body">
-          <div class="row">
-            <div class="row-head"><span class="row-name">Αρτοποιία Λενάκη</span><span class="row-val">€14.200 / έτος</span></div>
-            <p class="row-why">Καμία παραγγελία 7 εβδομάδες. Συνήθως παραγγέλνει κάθε 12 ημέρες.</p>
-            <span class="tag tag-brand">Αγοράζει συνήθως: αλεύρι, μαγιά, συσκευασία</span>
-          </div>
-          <div class="row">
-            <div class="row-head"><span class="row-name">Μίνι Μάρκετ Ριζάκη</span><span class="row-val">€8.900 οφειλή</span></div>
-            <p class="row-why">Υποσχέθηκε πληρωμή την περασμένη Παρασκευή. Δεν ήρθε τίποτα.</p>
-            <span class="tag tag-alarm">60 ημέρες ληξιπρόθεσμο</span>
-          </div>
-          <div class="row">
-            <div class="row-head"><span class="row-name">Τρόφιμα Βορρά</span><span class="row-val">€21.400 / έτος</span></div>
-            <p class="row-why">Παρήγγελνε ζάχαρη κάθε μήνα επί δύο χρόνια. Τίποτα από τον Μάρτιο.</p>
-            <span class="tag tag-alarm">Μην προσφέρετε Ηλιέλαιο 5L, έχουμε έλλειψη</span>
-          </div>
-        </div>
-      </div>
-      <p class="caption">Η πραγματική οθόνη που ανοίγει ο πωλητής σας. Χωρίς dashboard, χωρίς πεδίο αναζήτησης.</p>
     </div>
   </div>
   </div>
@@ -408,9 +428,9 @@
       </div>
     </div>
     <p class="small" style="margin:-2rem 0 3.2rem">
-        Αυτό ήταν το προϊόν σε είκοσι δευτερόλεπτα. <a href="/el/video/"><strong>Δείτε ολόκληρο το
-        βίντεο των δύο λεπτών</strong></a>: τι ανοίγει κάθε τμήμα το πρωί, και τι υπολόγισε το
-        Beatplan μέσα στη νύχτα.
+        Αυτό ήταν το προϊόν σε είκοσι δευτερόλεπτα. <a href="#watch"><strong>Τα δύο λεπτά στην
+        κορυφή της σελίδας</strong></a> δείχνουν τι ανοίγει κάθε τμήμα το πρωί, και τι υπολόγισε
+        το Beatplan μέσα στη νύχτα.
       </p>
 
     <div class="shots">

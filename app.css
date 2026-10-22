@@ -49,9 +49,27 @@ header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.9); back
 .btn-ghost{border-color:var(--line); color:var(--ink); background:#fff}
 .btn-lg{padding:.95rem 1.8rem; font-size:1.02rem}
 .btn-row{display:flex; flex-wrap:wrap; gap:.8rem}
-.hero{padding:4.5rem 0 4rem}
-.hero-grid{display:grid; gap:3.5rem; align-items:center}
-@media(min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr; gap:4rem}}
+/* padding-block, not the padding shorthand. On the English page the classes
+   are on one element, <div class="wrap hero">, and the shorthand's 0 wiped the
+   1.5rem side padding .wrap supplies: at 390px the headline and now the video
+   ran edge to edge with no gutter. The Greek page nests them and never showed
+   it. Logical axis only, so .wrap keeps the inline padding. */
+.hero{padding-block:4.5rem 4rem}
+/* Four children, not two: the headline, the video, the lede and the call to
+   action. On a phone they stack in DOM order, so the player sits between the
+   headline and the explanation and is fully inside the first screen. Stacked
+   any later it fell below the fold: the Greek lede alone runs ten lines at
+   390px. The headline still comes first and is never pushed off.
+   On desktop the video is placed explicitly in column two and spans all three
+   rows, so the left column still reads headline, lede, buttons. */
+.hero-grid{display:grid; gap:1.8rem}
+@media(min-width:960px){
+  .hero-grid{grid-template-columns:1.05fr .95fr; column-gap:4rem; row-gap:1.4rem; align-items:start}
+  .hero-copy{grid-column:1; grid-row:1}
+  .hero-lede{grid-column:1; grid-row:2}
+  .hero-cta {grid-column:1; grid-row:3; margin-top:.8rem}
+  .hero-vid {grid-column:2; grid-row:1 / span 3; align-self:center}
+}
 .pill{display:inline-flex; align-items:center; gap:.5rem; background:var(--brand-soft); color:var(--brand-ink);
   border-radius:999px; padding:.4rem .9rem; font-size:.82rem; font-weight:600; margin-bottom:1.5rem}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--good)}
@@ -132,3 +150,24 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
 .vidwrap video{width:100%;max-width:300px;border:1px solid #e3e3ee;border-radius:18px;
   box-shadow:0 10px 30px rgba(20,20,45,.10);display:block;margin:0 auto;background:#fff}
 .vidwrap h3{margin:0 0 .6rem}
+
+/* The two minute video, in the hero of every market's home page (22 Oct 2026).
+   aspect-ratio reserves the 16:9 box before the poster paints, so the hero
+   does not reflow under the visitor on a slow connection, and the background
+   is the brand purple rather than black because the poster is brand purple:
+   a black flash on first paint reads as a broken file. */
+.herovid{max-width:34rem; margin:0 auto; width:100%; scroll-margin-top:6rem}
+.herovid video{width:100%; aspect-ratio:16/9; display:block; background:#37327e;
+  border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-lg)}
+.vlabel{margin:0 0 .75rem; text-align:center; font-weight:800; font-size:1.05rem;
+  letter-spacing:-.01em; color:var(--ink)}
+
+/* The phone mock keeps its place under the player on desktop, where the right
+   column is taller than the video and would otherwise end in dead white. It is
+   hidden on a phone so the hero stays short and the lede is still reachable:
+   the same screens appear as pictures in See it a little further down.
+   It is also the only markup on the page carrying data-eu, so without it a
+   European visitor's euros and European company names have nothing to swap
+   into and that localisation quietly does nothing. */
+.herodev{display:none}
+@media(min-width:960px){.herodev{display:block; margin-top:2.6rem}}

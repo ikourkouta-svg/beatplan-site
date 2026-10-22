@@ -54,7 +54,7 @@
       <a href="#scenarios">Scenarios</a>
       <a href="#custom">Customisation</a>
       <a href="#see">See it</a>
-      <a href="/video/">The video</a>
+      <a href="#watch">In 2 minutes</a>
       <a href="#start">Assessment</a>
     </nav>
     <a class="btn btn-ghost" href="https://app.beatplan.io/">Sign in</a>
@@ -64,17 +64,60 @@
 <!-- hero -->
 <div class="wrap hero">
   <div class="hero-grid">
-    <div>
+    <div class="hero-copy">
       <div class="pill"><span class="dot"></span> Not a CRM. Nothing to fill in.</div>
       <h1>Every morning, the plan.<br>Not another database.</h1>
-      <p class="lede" style="margin-top:1.2rem">
+    </div>
+
+    <div class="hero-vid">
+      <div class="herovid" id="watch">
+        <p class="vlabel">Understand Beatplan in 2 minutes</p>
+        <video id="launch" controls playsinline preload="none"
+               poster="/img/beatplan-video-en-poster.jpg">
+          <source id="launchsrc" src="/img/beatplan-video-en.mp4" type="video/mp4">
+          Your browser cannot play this. <a href="/video/">Open it on its own page.</a>
+        </video>
+        <p class="caption">What the salesman opens, what collections opens, what ownership sees,
+          and what Beatplan worked out during the night.</p>
+      </div>
+
+      <div class="herodev">
+        <div class="device">
+          <div class="device-top"><strong>Today</strong><span>Tuesday &middot; 9 to call</span></div>
+          <div class="device-body">
+            <div class="row">
+              <div class="row-head"><span class="row-name" data-eu="Boulangerie Lenoir">Riverside Bakery</span><span class="row-val" data-eu="&euro;14,200 / yr">$14,200 / yr</span></div>
+              <p class="row-why">No order for 7 weeks. Usually orders every 12 days.</p>
+              <span class="tag tag-brand">Usually buys: flour, yeast, packaging</span>
+            </div>
+            <div class="row">
+              <div class="row-head"><span class="row-name" data-eu="Mercado Ribeiro">Meridian Superstores</span><span class="row-val" data-eu="&euro;8,900 owing">$8,900 owing</span></div>
+              <p class="row-why">Promised payment last Friday. Nothing received.</p>
+              <span class="tag tag-alarm">60 days overdue</span>
+            </div>
+            <div class="row">
+              <div class="row-head"><span class="row-name" data-eu="Nordkern Lebensmittel">Northgate Foods</span><span class="row-val" data-eu="&euro;21,400 / yr">$21,400 / yr</span></div>
+              <p class="row-why">Ordered sugar monthly for two years. Nothing since March.</p>
+              <span class="tag tag-alarm">Do not offer Sunflower Oil 5L, we are short</span>
+            </div>
+          </div>
+        </div>
+        <p class="caption">The actual screen your salesman opens. No dashboard, no search box.</p>
+      </div>
+    </div>
+
+    <div class="hero-lede">
+      <p class="lede">
         A <em>beat</em> is the round a salesman covers, and that is where this started. It now runs
         the rest of the company the same way: it reads the records you already produce, works out
         what has slipped, and hands every person and every department
         <strong style="color:var(--ink)">their list for the morning, with the reason attached</strong>.
         No pipeline. No stages. Nothing to fill in before it works.
       </p>
-      <div class="btn-row" style="margin-top:2rem">
+    </div>
+
+    <div class="hero-cta">
+      <div class="btn-row">
         <a class="btn btn-solid btn-lg" href="/assessment/">Book an assessment</a>
         <a class="btn btn-ghost btn-lg" href="#how">How it works</a>
       </div>
@@ -85,29 +128,6 @@
         <span>Every department, not only sales</span>
         <span>Priced per company</span>
       </div>
-    </div>
-    <div>
-      <div class="device">
-        <div class="device-top"><strong>Today</strong><span>Tuesday · 9 to call</span></div>
-        <div class="device-body">
-          <div class="row">
-            <div class="row-head"><span class="row-name" data-eu="Boulangerie Lenoir">Riverside Bakery</span><span class="row-val" data-eu="€14,200 / yr">$14,200 / yr</span></div>
-            <p class="row-why">No order for 7 weeks. Usually orders every 12 days.</p>
-            <span class="tag tag-brand">Usually buys: flour, yeast, packaging</span>
-          </div>
-          <div class="row">
-            <div class="row-head"><span class="row-name" data-eu="Mercado Ribeiro">Meridian Superstores</span><span class="row-val" data-eu="€8,900 owing">$8,900 owing</span></div>
-            <p class="row-why">Promised payment last Friday. Nothing received.</p>
-            <span class="tag tag-alarm">60 days overdue</span>
-          </div>
-          <div class="row">
-            <div class="row-head"><span class="row-name" data-eu="Nordkern Lebensmittel">Northgate Foods</span><span class="row-val" data-eu="€21,400 / yr">$21,400 / yr</span></div>
-            <p class="row-why">Ordered sugar monthly for two years. Nothing since March.</p>
-            <span class="tag tag-alarm">Do not offer Sunflower Oil 5L, we are short</span>
-          </div>
-        </div>
-      </div>
-      <p class="caption">The actual screen your salesman opens. No dashboard, no search box.</p>
     </div>
   </div>
 </div>
@@ -419,9 +439,9 @@
       </div>
     </div>
     <p class="small" style="margin:-2rem 0 3.2rem">
-        That was the product in twenty seconds. <a href="/video/"><strong>Watch the full two minute
-        video</strong></a> for what each department opens in the morning, and what Beatplan worked
-        out during the night.
+        That was the product in twenty seconds. <a href="#watch"><strong>The two minutes at the top
+        of this page</strong></a> show what each department opens in the morning, and what Beatplan
+        worked out during the night.
       </p>
 
     <div class="shots">
@@ -628,6 +648,17 @@
       location.replace('/el/'); return;
     }
   } catch (e) { if (tz === 'Europe/Athens' && location.search.indexOf('lang=en') === -1) { location.replace('/el/'); return; } }
+
+  /* Casting is per market, so an African visitor must not be watching the
+     European cut. Same time zone test and the same file as /video/ uses.
+     This sits ABOVE the Europe guard deliberately: below it an Africa/ zone
+     returns one line earlier and the swap would silently never run. The swap
+     is safe after parsing because preload is none, so no bytes have been
+     fetched for either cut until the visitor presses play. */
+  if (/^Africa\//.test(tz)) {
+    var av = document.getElementById('launch'), asrc = document.getElementById('launchsrc');
+    if (av && asrc) { asrc.src = '/img/beatplan-video-af.mp4'; av.load(); }
+  }
 
   if (!/^Europe\//.test(tz)) return;
   document.documentElement.setAttribute('data-region', 'eu');
