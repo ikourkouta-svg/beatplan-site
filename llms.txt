@@ -1,0 +1,21 @@
+# Beatplan
+
+> Beatplan is not a CRM. It reads the invoices and records a company already produces and issues each person's plan for the day: who to see, why, and what they may sell. Nothing to fill in, built around your business, then one price for the whole company.
+
+Beatplan is a system of action rather than a system of record. It stays alongside your existing accounts package (Sage, QuickBooks, Odoo, SAP or similar), reads from it, never writes back, and works out each morning what has slipped. Each customer is measured against their own ordering rhythm. Sales get calls, admin get chases and promises, directors get the numbers. It works offline and installs onto a phone from the browser. Everything starts with a free written or live assessment; the price is quoted to the business afterwards (a build fee, then a flat monthly fee, never per seat). Invoiced by MRX Consulting OÜ, Estonia. Contact: hello@beatplan.io
+
+## Product
+
+- [Beatplan (English)](https://beatplan.io/): what it is, how it works, what it does, scenarios, FAQ
+- [Beatplan (Greek)](https://beatplan.io/el/): the same site in Greek
+- [Understand Beatplan in 2 minutes](https://beatplan.io/video/): what each department opens in the morning and what Beatplan caught overnight ([Greek](https://beatplan.io/el/video/))
+
+## Get started
+
+- [Book an assessment](https://beatplan.io/assessment/): the assessment costs nothing and commits you to nothing ([Greek](https://beatplan.io/el/assessment/))
+- [Assessment questionnaire](https://beatplan.io/questionnaire/): twelve questions, a written assessment sent by email ([Greek](https://beatplan.io/el/questionnaire/))
+
+## Policies
+
+- [Privacy](https://beatplan.io/privacy/): what is held, where, and what is sent to the AI model
+- [Terms](https://beatplan.io/terms/): how an installation starts, cost, cancelling, data ownership and export
