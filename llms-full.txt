@@ -1,0 +1,110 @@
+# Beatplan
+
+> Beatplan is the AI manager for field sales. It is not a CRM. It reads the invoices and records a company already produces and issues each person's plan for the day: who to see, why, and what they may sell.
+
+## What it is
+
+Beatplan is a system of action, not a system of record, and not a transport-only tool. It stays alongside the company's existing accounting or ERP system, reads from it, and never writes back. Each night it works out what has slipped. Each customer is measured against their own ordering rhythm, not one blanket rule.
+
+Each person gets a morning list with the reason attached, by email and in the app:
+- Sales get calls.
+- Admin and collections get chases and promises.
+- Directors get the numbers.
+
+It works offline and installs onto a phone from the browser. There is no pipeline, no deal stages and nothing to fill in before it works. It can refuse to push a product that is short, near expiry, reserved, or priced below cost. Discounts remain the owner's decision.
+
+It is built around each business, then priced per company. Everything starts with a free assessment.
+
+## Who it is for / who it is not for
+
+For:
+- Distributors and wholesalers with salesmen on the road and years of invoice history.
+- Businesses where work has a rhythm and someone must notice when it slips. The site gives illustrative scenarios (not named customers): spice importer, pharmaceutical wholesaler, building materials, beverage distributor, industrial supplies, food ingredients, real estate fund, professional services, manufacturer.
+- Teams in places with patchy mobile signal.
+
+Not for:
+- Companies that want a system of record to type into. The site says: if you want a CRM you already have a system of record.
+- Companies that need self-hosting. It is hosted only, not on the customer's server.
+- Companies that want to self-serve. There is no self-service sign-up and no automatic trial.
+- Anyone for whom the load-your-history test shows nothing new. The site says: if it does not show you something about your own business that you did not already know, it is not for you.
+
+## Features
+
+- Morning plan: an ordered list of names with the reason for each, computed overnight from invoices.
+- Every customer on one card: contacts, history, what they buy, what they owe, calls logged.
+- Debtors and promises to pay, logged in one tap from the call screen.
+- Trip planning with costed routes; trips stay open until the report is filed.
+- Voice notes turned into structured written reports (a 30-second spoken note).
+- Reports to management: daily briefing, weekly plan, monthly review.
+- Stock, expiry and batches: near-expiry, dead stock, push lists that name the batch, oldest first.
+- Alarm when a selling price falls below cost.
+- Reserved stock is not sellable; short stock is barred from push lists.
+- Reorder and purchasing based on how fast each line sells.
+- Ask it anything: plain-language questions answered from the company's own data.
+- Operations, warehouse, purchasing, finance and service queues on the same engine.
+- Works offline; syncs when signal returns. Installs from the browser.
+- Customisation: connect existing accounting, stock systems and databases; custom screens, rules and reports quoted up front; customers' own developers can build against it.
+- Languages: English site and Greek site.
+
+## Pricing
+
+No list price is published. The price follows the assessment: a build fee, then a flat monthly fee for the whole company, never per seat, whatever the number of people. Lead generation and reporting to owners can sit inside the same monthly fee.
+
+Prices are quoted in euros for customers in Europe and in US dollars for the rest of the world, including Africa.
+
+Terms page (last updated 1 September 2026):
+- 12 month minimum from going live, monthly fee invoiced quarterly in advance.
+- Build fee: half on signature, half on going live.
+- A year paid in advance takes 10% off the monthly fee.
+- Prices exclude VAT or local tax.
+- After 12 months, one month's notice to end. No refund of a period already begun.
+
+## Company facts
+
+- Beatplan is a product of MRX Consulting OÜ, Estonia (registry code 16378539, VAT EE102459944), Tornimäe tn 5, 10145 Tallinn, Estonia. One company; Beatplan is a brand of it.
+- Founder: Ioannis (John) Kourkoutas.
+- Launched: 2026.
+- Data: held in the EU, on Supabase infrastructure in Frankfurt. Estonian law applies.
+- Third parties named in the Privacy page: Supabase (hosting), Google Gemini (answers questions, reads uploaded reports, only when a person asks), Resend (email), Stripe (payment), GitHub (static files). No tracking, no advertising pixels.
+- Data ownership: customer data belongs to the customer, exports to spreadsheet from inside the app with no exit fee, not used to train models, not sold. Deleted within 30 days on request.
+- Contact: hello@beatplan.io.
+- Invoicing: by invoice; local invoicing and mobile money available in some markets (ask).
+
+## Proof
+
+- The product screens on the site are real software running on a demonstration company. The customers, products and prices on screen were invented.
+- No named customers, logos or testimonials are published. The site does not show any customer to anybody.
+
+## FAQ
+
+**Do I have to replace my accounting or ERP system?** No. It stays the record of truth. Beatplan reads from it and never writes back.
+
+**How long before it is useful?** Once customers and invoice history are in, the call list is there the same day. Export three spreadsheets, or connect the system directly.
+
+**Is it a CRM?** No. There is no pipeline, deal stages or forecast. It issues the day's plan from invoices that already exist.
+
+**What happens with no mobile signal?** Everything keeps working on the phone and syncs when a connection returns.
+
+**Where does our data live and can we get it out?** In the EU (Frankfurt). Customers, contacts, products and invoice history export to spreadsheet from inside the app, with no exit fee.
+
+**Can we host it on our own server?** Not today. It runs as a hosted service.
+
+**Is my data separated from other companies?** Yes, enforced by the database, with an automated test suite that tries to break the separation on every change.
+
+**Is it only for sales?** No. The same engine runs operations, purchasing, credit control and service.
+
+**How does it start and what does it cost?** A free written or live assessment, then a quote: a build fee and a flat monthly fee.
+
+## Key pages
+
+- Home (English): https://beatplan.io/
+- Home (Greek): https://beatplan.io/el/
+- Book an assessment: https://beatplan.io/assessment/ (Greek: https://beatplan.io/el/assessment/)
+- Assessment questionnaire, twelve questions: https://beatplan.io/questionnaire/ (Greek: https://beatplan.io/el/questionnaire/)
+- Understand Beatplan in 2 minutes: https://beatplan.io/video/ (Greek: https://beatplan.io/el/video/)
+- Privacy: https://beatplan.io/privacy/
+- Terms: https://beatplan.io/terms/
+
+## Profiles elsewhere
+
+- LinkedIn: https://www.linkedin.com/company/beat-plan

@@ -9,6 +9,7 @@ Beatplan is a system of action rather than a system of record. It stays alongsid
 - [Beatplan (English)](https://beatplan.io/): what it is, how it works, what it does, scenarios, FAQ
 - [Beatplan (Greek)](https://beatplan.io/el/): the same site in Greek
 - [Understand Beatplan in 2 minutes](https://beatplan.io/video/): what each department opens in the morning and what Beatplan caught overnight ([Greek](https://beatplan.io/el/video/))
+- [Full description for AI systems](https://beatplan.io/llms-full.txt): facts, features, pricing model, FAQ in one file
 
 ## Get started
 
