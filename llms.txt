@@ -2,7 +2,7 @@
 
 > Beatplan is not a CRM. It reads the invoices and records a company already produces and issues each person's plan for the day: who to see, why, and what they may sell. Nothing to fill in, built around your business, then one price for the whole company.
 
-Beatplan is a system of action rather than a system of record. It stays alongside your existing accounts package (Sage, QuickBooks, Odoo, SAP or similar), reads from it, never writes back, and works out each morning what has slipped. Each customer is measured against their own ordering rhythm. Sales get calls, admin get chases and promises, directors get the numbers. It works offline and installs onto a phone from the browser. Everything starts with a free written or live assessment; the price is quoted to the business afterwards (a build fee, then a flat monthly fee, never per seat). Invoiced by MRX Consulting OÜ, Estonia. Contact: hello@beatplan.io
+Beatplan is a system of action rather than a system of record. It stays alongside your existing accounting or ERP system, reads from it, never writes back, and works out each morning what has slipped. Each customer is measured against their own ordering rhythm. Sales get calls, admin get chases and promises, directors get the numbers. It works offline and installs onto a phone from the browser. Everything starts with a free written or live assessment; the price is quoted to the business afterwards (a build fee, then a flat monthly fee, never per seat). Invoiced by MRX Consulting OÜ, Estonia. Contact: hello@beatplan.io
 
 ## Product
 
