@@ -35,9 +35,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="/fonts/inter.css" rel="stylesheet">
 <link rel="stylesheet" href="/app.css">
 <link rel="alternate" hreflang="en" href="https://beatplan.io/">
 <link rel="alternate" hreflang="el" href="https://beatplan.io/el/">
@@ -719,12 +717,18 @@
   /* Greece gets the Greek site. Choosing EN stores the choice, so the redirect
      never fights the visitor: without that guard, every click on EN would be
      bounced straight back here. */
+  /* Greek is decided by the browser's preferred language, not the clock, so an
+     English speaker in Athens stays here and a Greek speaker in Cyprus or abroad
+     is sent over. Time zone is only the fallback for browsers that report no
+     language list. */
+  var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [];
+  var prefersEl = langs.length ? /^el\b/i.test(langs[0]) : tz === 'Europe/Athens';
   try {
     if (location.search.indexOf('lang=en') > -1) localStorage.setItem('bp_lang', 'en');
-    if (tz === 'Europe/Athens' && localStorage.getItem('bp_lang') !== 'en') {
+    if (prefersEl && localStorage.getItem('bp_lang') !== 'en') {
       location.replace('/el/'); return;
     }
-  } catch (e) { if (tz === 'Europe/Athens' && location.search.indexOf('lang=en') === -1) { location.replace('/el/'); return; } }
+  } catch (e) { if (prefersEl && location.search.indexOf('lang=en') === -1) { location.replace('/el/'); return; } }
 
   /* Casting is per market, so an African visitor must not be watching the
      European cut. Same time zone test and the same file as /video/ uses.

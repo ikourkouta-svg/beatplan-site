@@ -10,9 +10,7 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="/fonts/inter.css" rel="stylesheet">
 <style>
 /* Light by design. A landing page should not change character because the
    visitor's laptop happens to be in night mode. */
@@ -202,15 +200,16 @@ footer{border-top:1px solid var(--line); padding:3rem 0 4rem; font-size:.9rem}
 <a class="back" href="/">← Beatplan</a>
 
 <h1>Privacy</h1>
-<p class="updated">Last updated 1 September 2026</p>
+<p class="updated">Last updated 7 November 2026</p>
 
 <p>Beatplan is operated by MRX Consulting OÜ, a company registered in Estonia (registry code
 16378539, VAT EE102459944). You can reach us at <a href="mailto:hello@beatplan.io">hello@beatplan.io</a>
 about anything on this page.</p>
 
 <div class="note">
-<p style="margin:0"><strong>There is no tracking on this site or in the product.</strong> No analytics,
-no advertising pixels, no third-party scripts of any kind. We do not know you visited this page.</p>
+<p style="margin:0"><strong>No cookies, no advertising, no tracking across sites.</strong> This website
+counts page views with Vercel Web Analytics, which sets no cookies and keeps no profile of you. The
+product itself runs no analytics at all. Fonts are served from our own site, not from Google.</p>
 </div>
 
 <h2>Two different sets of data</h2>
@@ -242,6 +241,8 @@ without it.</p>
 <tr><td>Resend</td><td>Sending the daily plan and account email</td><td>Recipient addresses and the content of those emails</td></tr>
 <tr><td>Stripe</td><td>Taking payment</td><td>Billing details. Card numbers go to Stripe directly and never reach us</td></tr>
 <tr><td>GitHub</td><td>Serving the application files</td><td>Nothing. Static files only</td></tr>
+<tr><td>Vercel</td><td>Hosting this website and counting its page views</td><td>Standard web request data such as IP address and browser, used for anonymous page counts</td></tr>
+<tr><td>forms.work-cut.com</td><td>Receiving the assessment and questionnaire forms on this website</td><td>What you type into those forms: name, company, email and your answers</td></tr>
 </table>
 
 <h2>What the AI sees, in plain terms</h2>
